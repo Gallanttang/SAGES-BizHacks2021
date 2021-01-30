@@ -15,7 +15,7 @@
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
             <div class="flex-shrink-0">
-              <img class="h-8 w-8" src="images/Best_Buy_logo_2018.svg" alt="Workflow">
+              <img class="h-8 w-13" src="images/Best_Buy_logo_2018.svg" alt="Workflow">
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
@@ -237,7 +237,7 @@
                               <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                             <div class="flex text-sm text-gray-600">
-                              <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                              <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-300 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                 <span>Upload a file</span>
                                 <input id="file-upload" name="file-upload" type="file" class="sr-only">
                               </label>
@@ -251,7 +251,7 @@
                       </div>
                     </div>
                     <div class="product-category px-4 py-3 bg-gray-50 text-right sm:px-6">
-                      <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         Save
                       </button>
                     </div>
@@ -267,8 +267,10 @@
             </div>
           </div>
 
+          <div class="loader1 mx-auto hidden"></div>
+
           <!--Product Information-->
-          <div class="mt-10 sm:mt-0">
+          <div class="product-information hidden mt-10 sm:mt-0">
             <div class="md:grid md:grid-cols-3 md:gap-6">
               <div class="md:col-span-1">
                 <div class="px-4 sm:px-0">
@@ -285,32 +287,80 @@
                       <div class="grid grid-cols-6 gap-6">
                         <div class="col-span-6 sm:col-span-4">
                           <label for="email_address" class="block text-sm font-medium text-gray-700">Screen Size (inches)</label>
-                          <input type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                          <input type="number" name="email_address" id="email_address" autocomplete="email" class="mt-1 py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-4">
                           <label for="email_address" class="block text-sm font-medium text-gray-700">CPU</label>
-                          <input type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                          <input type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-4">
+                          <label for="CPU" class="block text-sm font-medium text-gray-700">CPU</label>
+                          <select id="CPU" name="CPU" autocomplete="GC" class="mt-1 block w-full py-3 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            <option>Intel Ci3-1005G1</option>
+                            <option>Intel Core i5-1035G7 Processor</option>
+                            <option>Intel Core i5-1135G7</option>
+                            <option>Intel Core i5-10210U</option>
+                            <option>Intel Core i7-8665U</option>
+                            <option>Intel Core i7-10875H 2.3GHz</option>
+                            <option>Intel Celeron 5205Untel</option>
+                            <option>Intel Celeron N2840</option>
+                            <option>AMD Ryzen 5 2.1GHz</option>
+                            <option>AMD Athlon Silver 3050U</option>
+                            <option>AMD Ryzen 5 4600H</option>
+                            <option>MediaTek MT8173C</option>
+                            <option>8th Gen Intel Core m3</option>
+                            <option>Quad Core ARM Cortex-A17 RK3288-C</option>
+                            
+                          </select>
                         </div>
 
                         <div class="col-span-6 sm:col-span-4">
                           <label for="email_address" class="block text-sm font-medium text-gray-700">RAM (GB)</label>
-                          <input type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                          <input type="number" name="email_address" id="email_address" autocomplete="email" class="mt-1 py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
-                        <div class="col-span-6 sm:col-span-4">
+                        <!-- <div class="col-span-6 sm:col-span-4">
                           <label for="email_address" class="block text-sm font-medium text-gray-700">Graphics Card</label>
-                          <input type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                          <input type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div> -->
+
+                        <div class="col-span-6 sm:col-span-4">
+                          <label for="graphicsCard" class="block text-sm font-medium text-gray-700">Graphics Card</label>
+                          <select id="GC" name="OS" autocomplete="GC" class="mt-1 block w-full py-3 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            <option>Intel Graphics</option>
+                            <option>Intel UHD Graphics 600</option>
+                            <option>Intel HD Graphics 615</option>
+                            <option>Intel UHD</option>
+                            <option>AMD</option>
+                            <option>AMD Radeon RX 5600M</option>
+                            <option>Iris Plus Graphics</option>
+                            <option>Iris Plus Graphics 950</option>
+                            <option>Integrated ARM G72MP3</option>
+                            <option>NVIDIA RTX 2080</option>
+                            <option>NVIDIA GeForce GTX 1650</option>
+                          </select>
                         </div>
 
                         <div class="col-span-6 sm:col-span-4">
                           <label for="email_address" class="block text-sm font-medium text-gray-700">USB Ports</label>
-                          <input type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                          <input type="number" name="email_address" id="email_address" autocomplete="email" class="mt-1 py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
-                        <div class="col-span-6 sm:col-span-4">
+                        <!-- <div class="col-span-6 sm:col-span-4">
                           <label for="email_address" class="block text-sm font-medium text-gray-700">Pre-loaded Operating System</label>
-                          <input type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                          <input type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div> -->
+
+                        <div class="col-span-6 sm:col-span-4">
+                          <label for="operatingSystem" class="block text-sm font-medium text-gray-700">Pre-loaded Operating System</label>
+                          <select id="OS" name="OS" autocomplete="OS" class="mt-1 block w-full py-3 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            <option>MacOS Big Sur</option>
+                            <option>Chrome OS</option>
+                            <option>Windows 10</option>
+                            <option>Linux</option>
+                          </select>
                         </div>
 
                         <!-- <div class="col-span-6 sm:col-span-3">
@@ -358,8 +408,8 @@
                         </div> -->
                       </div>
                     </div>
-                    <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                      <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <div class="product-information-button px-4 py-3 bg-gray-50 text-right sm:px-6">
+                      <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         Save
                       </button>
                     </div>
@@ -445,14 +495,16 @@
               <div class="border-t border-gray-200"></div>
             </div>
           </div>
+
+          <div class="loader2 mx-auto hidden"></div>
           
-          <div class="mt-10 sm:mt-0">
+          <div class="terms hidden mt-10 sm:mt-0">
             <div class="md:grid md:grid-cols-3 md:gap-6">
               <div class="md:col-span-1">
                 <div class="px-4 sm:px-0">
-                  <h3 class="text-lg font-medium leading-6 text-gray-900">Notifications</h3>
+                  <h3 class="text-lg font-medium leading-6 text-gray-900">Terms & Conditions</h3>
                   <p class="mt-1 text-sm text-gray-600">
-                    Decide which communications you'd like to receive and how.
+                    You must agree to the terms and conditions of our marketplace before selling your product with us.
                   </p>
                 </div>
               </div>
@@ -461,15 +513,15 @@
                   <div class="shadow overflow-hidden sm:rounded-md">
                     <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
                       <fieldset>
-                        <legend class="text-base font-medium text-gray-900">By Email</legend>
+                        <legend class="text-base font-medium text-gray-900">Terms</legend>
                         <div class="mt-4 space-y-4">
                           <div class="flex items-start">
                             <div class="flex items-center h-5">
                               <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
                             </div>
                             <div class="ml-3 text-sm">
-                              <label for="comments" class="font-medium text-gray-700">Comments</label>
-                              <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
+                              <label for="comments" class="font-medium text-gray-700">Data rights</label>
+                              <p class="text-gray-500">I agree that Best Buy has rights to the data that is used in the selling of my product.</p>
                             </div>
                           </div>
                           <div class="flex items-start">
@@ -477,8 +529,8 @@
                               <input id="candidates" name="candidates" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
                             </div>
                             <div class="ml-3 text-sm">
-                              <label for="candidates" class="font-medium text-gray-700">Candidates</label>
-                              <p class="text-gray-500">Get notified when a candidate applies for a job.</p>
+                              <label for="candidates" class="font-medium text-gray-700">Data Privacy</label>
+                              <p class="text-gray-500">I agree that Best Buy has data privacy rights to my products.</p>
                             </div>
                           </div>
                           <div class="flex items-start">
@@ -486,13 +538,13 @@
                               <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
                             </div>
                             <div class="ml-3 text-sm">
-                              <label for="offers" class="font-medium text-gray-700">Offers</label>
-                              <p class="text-gray-500">Get notified when a candidate accepts or rejects an offer.</p>
+                              <label for="offers" class="font-medium text-gray-700">Marketplace Rights</label>
+                              <p class="text-gray-500">Best Buy has the rights to take my product off the marketplace anytime.</p>
                             </div>
                           </div>
                         </div>
                       </fieldset>
-                      <fieldset>
+                      <!-- <fieldset>
                         <div>
                           <legend class="text-base font-medium text-gray-900">Push Notifications</legend>
                           <p class="text-sm text-gray-500">These are delivered via SMS to your mobile phone.</p>
@@ -517,10 +569,10 @@
                             </label>
                           </div>
                         </div>
-                      </fieldset>
+                      </fieldset> -->
                     </div>
                     <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                      <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         Save
                       </button>
                     </div>
