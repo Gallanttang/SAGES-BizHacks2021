@@ -20,7 +20,7 @@
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#" class="bg-blue-800 text-white px-3 py-2 rounded-md text-sm font-medium">Put a product in our store</a>
+                <a href="#" class="bg-blue-800 text-white px-3 py-2 rounded-md text-sm font-medium">Sell a New Product</a>
   
                 <a href="#" class="text-gray-100 hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Your Products</a>
   
@@ -144,7 +144,7 @@
     <header class="bg-white shadow">
       <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <h1 class="text-3xl font-bold leading-tight text-gray-900">
-          Dashboard
+          Put your product in the Best Buy marketplace!
         </h1>
       </div>
     </header>
@@ -183,7 +183,7 @@
                           Product Name
                         </label>
                         <div class="mt-1">
-                          <textarea id="about" name="about" rows="3" class="shadow-sm border-2 border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm rounded-md" placeholder="Apple MacBook Pro with Touch Bar 13.3"></textarea>
+                          <textarea id="about" name="about" rows="3" class="shadow-sm border-2 border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm rounded-md" placeholder="Example: Apple MacBook Pro with Touch Bar 13.3"></textarea>
                         </div>
                         <p class="mt-2 text-sm text-gray-500">
                           Put your product name with as much detail as possible.
@@ -236,10 +236,10 @@
                             <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
                               <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            <div class="flex text-sm text-gray-600">
+                            <div class="flex text-sm text-gray-600 fily">
                               <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-300 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                 <span>Upload a file</span>
-                                <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                <input id="file-upload" name="file-upload" multiple="multiple" type="file" class="sr-only">
                               </label>
                               <p class="pl-1">or drag and drop</p>
                             </div>
@@ -248,6 +248,7 @@
                             </p>
                           </div>
                         </div>
+                        <h3 id="imagesReceived" class="hidden text-center my-3 text-gray-600">Images Received!</h3>
                       </div>
                     </div>
                     <div class="product-category px-4 py-3 bg-gray-50 text-right sm:px-6">
@@ -285,19 +286,26 @@
                   <div class="shadow overflow-hidden sm:rounded-md">
                     <div class="px-4 py-5 bg-white sm:p-6">
                       <div class="grid grid-cols-6 gap-6">
+
                         <div class="col-span-6 sm:col-span-4">
-                          <label for="email_address" class="block text-sm font-medium text-gray-700">Screen Size (inches)</label>
-                          <input type="number" name="email_address" id="email_address" autocomplete="email" class="mt-1 py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                          <label for="email_address" class="block text-sm font-medium text-gray-700">Product Name: Google Pixelbook Go 13.3" Chromebook</label>
+                          <label for="email_address" class="block text-sm font-medium text-gray-700">BestBuy Unique Web Code: 13897699</label>
                         </div>
 
                         <div class="col-span-6 sm:col-span-4">
-                          <label for="email_address" class="block text-sm font-medium text-gray-700">CPU</label>
-                          <input type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                          <label for="email_address" class="block text-sm font-extrabold text-gray-700">Suggested Category</label>
+                          <input type="text" name="email_address" id="email_address" autocomplete="text" class="mt-1 py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md" value="Computers, Tablets, & Accessories > Laptops & Desktops > Chromebooks">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-4">
+                          <label for="email_address" class="block text-sm font-medium text-gray-700">Screen Size (inches)</label>
+                          <input type="number" name="email_address" id="email_address" autocomplete="number" class="mt-1 py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md" value="13.3">
                         </div>
 
                         <div class="col-span-6 sm:col-span-4">
                           <label for="CPU" class="block text-sm font-medium text-gray-700">CPU</label>
                           <select id="CPU" name="CPU" autocomplete="GC" class="mt-1 block w-full py-3 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            <option>8th Gen Intel Core m3</option>
                             <option>Intel Ci3-1005G1</option>
                             <option>Intel Core i5-1035G7 Processor</option>
                             <option>Intel Core i5-1135G7</option>
@@ -310,15 +318,24 @@
                             <option>AMD Athlon Silver 3050U</option>
                             <option>AMD Ryzen 5 4600H</option>
                             <option>MediaTek MT8173C</option>
-                            <option>8th Gen Intel Core m3</option>
                             <option>Quad Core ARM Cortex-A17 RK3288-C</option>
-                            
                           </select>
                         </div>
 
                         <div class="col-span-6 sm:col-span-4">
                           <label for="email_address" class="block text-sm font-medium text-gray-700">RAM (GB)</label>
-                          <input type="number" name="email_address" id="email_address" autocomplete="email" class="mt-1 py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                          <input type="number" name="email_address" id="email_address" autocomplete="on" value="4" class="mt-1 py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-4">
+                          <label for="SSD" class="block text-sm font-medium text-gray-700">Solid State Drive Capacity</label>
+                          <select id="SSD" name="SSD" autocomplete="on" class="mt-1 block w-full py-3 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            <option>64 GB</option>
+                            <option>32 GB</option>
+                            <option>128 GB</option>
+                            <option>256 GB</option>
+                            <option>512 GB</option>
+                          </select>
                         </div>
 
                         <!-- <div class="col-span-6 sm:col-span-4">
@@ -345,7 +362,12 @@
 
                         <div class="col-span-6 sm:col-span-4">
                           <label for="email_address" class="block text-sm font-medium text-gray-700">USB Ports</label>
-                          <input type="number" name="email_address" id="email_address" autocomplete="email" class="mt-1 py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                          <input type="number" name="email_address" id="email_address" autocomplete="on" value="2" class="mt-1 py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-4">
+                          <label for="email_address" class="block text-sm font-medium text-gray-700">Weight (lbs)</label>
+                          <input type="number" name="email_address" id="email_address" autocomplete="on" value="2.33" class="mt-1 py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 block border-2 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <!-- <div class="col-span-6 sm:col-span-4">
@@ -356,8 +378,8 @@
                         <div class="col-span-6 sm:col-span-4">
                           <label for="operatingSystem" class="block text-sm font-medium text-gray-700">Pre-loaded Operating System</label>
                           <select id="OS" name="OS" autocomplete="OS" class="mt-1 block w-full py-3 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                            <option>MacOS Big Sur</option>
                             <option>Chrome OS</option>
+                            <option>MacOS Big Sur</option>
                             <option>Windows 10</option>
                             <option>Linux</option>
                           </select>
@@ -586,6 +608,7 @@
   </div>
 
   <script src="index.js"></script>
+  <script type='text/javascript' src='filereader.js'></script>
     
 </body>
 </html>
